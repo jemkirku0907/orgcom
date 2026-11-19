@@ -568,6 +568,14 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+.logo-image {
+  display: block;
+  flex-shrink: 0;
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  object-fit: contain;
+}
+
 .logo-caption {
   display: flex;
   flex-direction: column;
