@@ -35,9 +35,10 @@ const MEMBERS: MemberProfile[] = [
     avatarLetter: "K",
     avatarClass: "avatar-kirk",
     role: "Team Member · Section II-ACSAD",
-    focus: "[Add assigned role or task]",
-    bio: "Short description slot for Kirk Stanley Tan. Add your assigned role, tasks in the group, and brief introduction here.",
-    filterText: "kirk stanley tan k",
+    focus: "Aspiring Developer",
+    bio: "A passionate learner, aspiring developer, and someone who enjoys turning ideas into reality.",
+    photo: "/members/kirk.png",
+    filterText: "kirk stanley tan k developer",
   },
   {
     id: "romaine",
@@ -48,6 +49,7 @@ const MEMBERS: MemberProfile[] = [
     role: "Team Member · Section II-ACSAD",
     focus: "[Add assigned role or task]",
     bio: "Short description slot for Romaine Klaire Sison. Add your assigned role, tasks in the group, and brief introduction here.",
+    photo: "/members/romaine.jpg",
     filterText: "romaine klaire sison r",
   },
   {
