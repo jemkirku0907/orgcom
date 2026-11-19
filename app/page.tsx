@@ -497,14 +497,11 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Company Logo Upload Placeholder */}
+              {/* Company logo */}
               <div className="logo-upload-box">
-                <div className="logo-caption logo-caption-right">
-                  <span className="logo-label">Company Logo</span>
-                </div>
                 <img
                   src="/assets/company-logo.png"
-                  alt="Company logo"
+                  alt=""
                   className="logo-image"
                 />
               </div>
