@@ -69,10 +69,11 @@ const MEMBERS: MemberProfile[] = [
     initials: "J.M.B.",
     avatarLetter: "J",
     avatarClass: "avatar-john",
-    role: "Team Member · Section II-ACSAD",
-    focus: "[Add assigned role or task]",
-    bio: "Short description slot for John Michael Bautista. Add your assigned role, tasks in the group, and brief introduction here.",
-    filterText: "john michael bautista j",
+    role: "UI/UX Designer · Section II-ACSAD",
+    focus: "UI/UX Designer",
+    bio: "I serve as the UI/UX Designer for our group in Section II-ACSAD, creating clear, accessible, and engaging user experiences.",
+    photo: "/members/john-michael-bautista.jpg",
+    filterText: "john michael bautista j ui ux designer",
   },
 ];
 
@@ -500,11 +501,12 @@ export default function HomePage() {
               <div className="logo-upload-box">
                 <div className="logo-caption logo-caption-right">
                   <span className="logo-label">Company Logo</span>
-                  <span className="logo-hint">Upload placeholder</span>
                 </div>
-                <div className="logo-placeholder-square" aria-label="Company logo upload placeholder">
-                  Logo
-                </div>
+                <img
+                  src="/assets/company-logo.png"
+                  alt="Company logo"
+                  className="logo-image"
+                />
               </div>
             </div>
 
@@ -559,14 +561,20 @@ export default function HomePage() {
                             role="img"
                             aria-label="Member photo upload placeholder"
                           >
-                            <span
-                              className={`photo-initials-circle ${activeProfile.avatarClass}`}
-                              id="spotlight-avatar-circle"
-                            >
-                              {activeProfile.avatarLetter}
-                            </span>
-                            <span className="photo-slot-label">Photo Slot</span>
-                            <span className="photo-slot-label">Upload member photo</span>
+                            {activeProfile.id === "john" ? (
+                              <span className="photo-name">{activeProfile.name}</span>
+                            ) : (
+                              <>
+                                <span
+                                  className={`photo-initials-circle ${activeProfile.avatarClass}`}
+                                  id="spotlight-avatar-circle"
+                                >
+                                  {activeProfile.avatarLetter}
+                                </span>
+                                <span className="photo-slot-label">Photo Slot</span>
+                                <span className="photo-slot-label">Upload member photo</span>
+                              </>
+                            )}
                           </div>
                         )}
                       </div>

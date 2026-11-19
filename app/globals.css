@@ -568,6 +568,14 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+.logo-image {
+  display: block;
+  flex-shrink: 0;
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  object-fit: contain;
+}
+
 .logo-caption {
   display: flex;
   flex-direction: column;
@@ -788,6 +796,16 @@ h1, h2, h3, h4 {
   font-weight: 500;
   letter-spacing: 0.03em;
   color: var(--ink-muted);
+}
+
+.photo-name {
+  max-inline-size: 12rem;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--ink-primary);
 }
 
 .spotlight-top-row {
