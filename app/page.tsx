@@ -72,7 +72,7 @@ const MEMBERS: MemberProfile[] = [
     role: "UI/UX Designer · Section II-ACSAD",
     focus: "UI/UX Designer",
     bio: "I serve as the UI/UX Designer for our group in Section II-ACSAD, creating clear, accessible, and engaging user experiences.",
-    photo: "/members/john-michael-bautista.jpg",
+    photo: "/members/john-michael-bautista.png",
     filterText: "john michael bautista j ui ux designer",
   },
 ];
