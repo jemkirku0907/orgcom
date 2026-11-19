@@ -790,6 +790,16 @@ h1, h2, h3, h4 {
   color: var(--ink-muted);
 }
 
+.photo-name {
+  max-inline-size: 12rem;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--ink-primary);
+}
+
 .spotlight-top-row {
   display: flex;
   flex-wrap: wrap;
