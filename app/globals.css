@@ -746,6 +746,17 @@ h1, h2, h3, h4 {
   gap: 0.45rem;
 }
 
+.member-photo-img {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+}
+
 .photo-placeholder-box {
   inline-size: 100%;
   aspect-ratio: 4 / 5;

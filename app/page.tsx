@@ -11,6 +11,7 @@ interface MemberProfile {
   role: string;
   focus: string;
   bio: string;
+  photo?: string;
   filterText: string;
 }
 
@@ -21,10 +22,11 @@ const MEMBERS: MemberProfile[] = [
     initials: "J.U.",
     avatarLetter: "J",
     avatarClass: "avatar-jemkirk",
-    role: "Team Member · Section II-ACSAD",
-    focus: "[Add assigned role or task]",
-    bio: "Short description slot for Jemkirk Utana. Add your assigned role, tasks in the group, and brief introduction here.",
-    filterText: "jemkirk utana j",
+    role: "Project Manager / Developer · Section II-ACSAD",
+    focus: "Project Manager / Developer",
+    bio: "I serve as the Project Manager and Developer for our group in Section II-ACSAD. I coordinate our tasks and deadlines, and build and maintain this ORGCOM web page.",
+    photo: "/members/jemkirk.jpg",
+    filterText: "jemkirk utana j project manager developer",
   },
   {
     id: "kirk",
@@ -543,20 +545,28 @@ export default function HomePage() {
                   {activeProfile && (
                     <article className="member-spotlight-card" aria-live="polite">
                       <div className="member-photo-frame">
-                        <div
-                          className="photo-placeholder-box"
-                          role="img"
-                          aria-label="Member photo upload placeholder"
-                        >
-                          <span
-                            className={`photo-initials-circle ${activeProfile.avatarClass}`}
-                            id="spotlight-avatar-circle"
+                        {activeProfile.photo ? (
+                          <img
+                            src={activeProfile.photo}
+                            alt={activeProfile.name}
+                            className="member-photo-img"
+                          />
+                        ) : (
+                          <div
+                            className="photo-placeholder-box"
+                            role="img"
+                            aria-label="Member photo upload placeholder"
                           >
-                            {activeProfile.avatarLetter}
-                          </span>
-                          <span className="photo-slot-label">Photo Slot</span>
-                          <span className="photo-slot-label">Upload member photo</span>
-                        </div>
+                            <span
+                              className={`photo-initials-circle ${activeProfile.avatarClass}`}
+                              id="spotlight-avatar-circle"
+                            >
+                              {activeProfile.avatarLetter}
+                            </span>
+                            <span className="photo-slot-label">Photo Slot</span>
+                            <span className="photo-slot-label">Upload member photo</span>
+                          </div>
+                        )}
                       </div>
 
                       <div>
