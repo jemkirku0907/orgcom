@@ -72,7 +72,7 @@ const MEMBERS: MemberProfile[] = [
     role: "UI/UX Designer · Section II-ACSAD",
     focus: "UI/UX Designer",
     bio: "I serve as the UI/UX Designer for our group in Section II-ACSAD, creating clear, accessible, and engaging user experiences.",
-    photo: "/members/john-michael-bautista.jpg",
+    photo: "/members/john-michael-bautista.png",
     filterText: "john michael bautista j ui ux designer",
   },
 ];
@@ -497,14 +497,11 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Company Logo Upload Placeholder */}
+              {/* Company logo */}
               <div className="logo-upload-box">
-                <div className="logo-caption logo-caption-right">
-                  <span className="logo-label">Company Logo</span>
-                </div>
                 <img
                   src="/assets/company-logo.png"
-                  alt="Company logo"
+                  alt=""
                   className="logo-image"
                 />
               </div>
