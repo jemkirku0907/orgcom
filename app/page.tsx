@@ -65,14 +65,14 @@ const MEMBERS: MemberProfile[] = [
   },
   {
     id: "john",
-    name: "John Michael O. Bautista",
-    initials: "J.M.O.B.",
+    name: "John Michael Bautista",
+    initials: "J.M.B.",
     avatarLetter: "J",
     avatarClass: "avatar-john",
-    role: "Team Member · Section II-ACSAD",
-    focus: "[Add assigned role or task]",
-    bio: "Short description slot for John Michael O. Bautista. Add your assigned role, tasks in the group, and brief introduction here.",
-    filterText: "john michael o bautista j",
+    role: "UI/UX Designer · Section II-ACSAD",
+    focus: "UI/UX Designer",
+    bio: "I serve as the UI/UX Designer for our group in Section II-ACSAD, creating clear, accessible, and engaging user experiences.",
+    filterText: "john michael bautista j ui ux designer",
   },
 ];
 
@@ -844,7 +844,7 @@ export default function HomePage() {
                       J
                     </span>
                     <div>
-                      <h4>John Michael O. Bautista</h4>
+                      <h4>John Michael Bautista</h4>
                       <p className="reflection-role">Member 5</p>
                     </div>
                   </header>
@@ -859,7 +859,7 @@ export default function HomePage() {
                   <footer className="reflection-footnote">
                     <span className="fn-mark">⁵</span>
                     <p>
-                      <strong>Footnote by John Michael O. Bautista:</strong> A clear message is easier to remember and
+                      <strong>Footnote by John Michael Bautista:</strong> A clear message is easier to remember and
                       act on.
                     </p>
                   </footer>
@@ -931,7 +931,7 @@ export default function HomePage() {
                     <div>
                       <dt>Members</dt>
                       <dd>
-                        Jemkirk Utana, Kirk Stanley Tan, Romaine Klaire Sison, Jhonloyd Jalea, John Michael O. Bautista
+                        Jemkirk Utana, Kirk Stanley Tan, Romaine Klaire Sison, Jhonloyd Jalea, John Michael Bautista
                       </dd>
                     </div>
                     <div>
@@ -978,7 +978,7 @@ export default function HomePage() {
               <strong>ORGCOM · Section II-ACSAD</strong> — University of Makati
             </p>
             <p className="footer-sub">
-              Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael O. Bautista
+              Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista
             </p>
           </footer>
         </div>
