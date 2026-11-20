@@ -936,6 +936,14 @@ h1, h2, h3, h4 {
   aspect-ratio: 16 / 9;
 }
 
+.video-player {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  background: #111827;
+}
+
 .video-placeholder-overlay {
   position: absolute;
   inset: 0;

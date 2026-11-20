@@ -633,16 +633,16 @@ export default function HomePage() {
                 A short 1 to 3 minute video introducing our group, our company idea, and how we communicate as a team.
               </p>
 
-              <div className="video-stage" role="group" aria-label="Embedded video slot, 16 by 9 aspect ratio">
-                <div className="video-placeholder-overlay">
-                  <div className="play-badge" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="7 4 20 12 7 20 7 4"></polygon>
-                    </svg>
-                  </div>
-                  <p className="placeholder-title">Embedded Video Slot (16:9)</p>
-                  <p className="placeholder-sub">Add your 1:00 – 3:00 min MP4 file or video embed link here</p>
-                </div>
+              <div className="video-stage" role="group" aria-label="ORGCOM video showcase, 16 by 9 aspect ratio">
+                <video
+                  className="video-player"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/orgcom.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <p className="caption-note">Duration requirement: 1 minute minimum, 3 minutes maximum.</p>
 
