@@ -260,7 +260,7 @@ export default function HomePage() {
                 className="workspace-avatar-img"
               />
               <div className="workspace-meta">
-                <span className="workspace-name">ORGCOM</span>
+                <span className="workspace-name">A&amp;A</span>
                 <span className="workspace-sub">UMak · Team Blueteeth</span>
               </div>
               <button
@@ -646,7 +646,7 @@ export default function HomePage() {
               {/* Centered Headings */}
               <div className="masthead-center">
                 <h1 id="main-heading" className="org-heading-primary" tabIndex={-1}>
-                  ORGCOM
+                  Awake and Aware
                 </h1>
               </div>
 
