@@ -999,7 +999,7 @@ export default function HomePage() {
                         Committed to designing accessible digital wellness tools, educational programs, and community
                         campaigns that empower Filipinos of all ages to overcome screen addiction, adopt healthier
                         digital habits, and build a culture of mindful technology use, one school, one workplace, one
-                        family, and one screen-free moment at a time.
+                        family, and one screen free moment at a time.
                       </dd>
                     </div>
                     <div>
@@ -1013,9 +1013,9 @@ export default function HomePage() {
                     <div>
                       <dt>Products &amp; Services</dt>
                       <dd>
-                        Awake &amp; Aware Mindful Screen App (20-20-20 Rule timer, Bedtime Screen-Free Pledge mode,
-                        7-Day Mindful Screen Challenge tracker), School &amp; Barangay Digital Wellness Workshops,
-                        Hapag-Kainan Walang Gadget Family Kits, and Youth Advocacy Media Production (MPAC.mp4).
+                        Awake &amp; Aware Mindful Screen App (20/20/20 Rule timer, Bedtime Screen Free Pledge mode,
+                        7 Day Mindful Screen Challenge tracker), School &amp; Barangay Digital Wellness Workshops,
+                        Hapag Kainan Walang Gadget Family Kits, and Youth Advocacy Media Production (MPAC.mp4).
                       </dd>
                     </div>
                     <div>
@@ -1033,12 +1033,12 @@ export default function HomePage() {
                   <dl className="company-facts">
                     <div>
                       <dt>Sector</dt>
-                      <dd>Student-Led Media Advocacy, Digital Literacy &amp; Youth Digital Well-being</dd>
+                      <dd>Student Led Media Advocacy, Digital Literacy &amp; Youth Digital Wellbeing</dd>
                     </div>
                     <div>
                       <dt>Structure</dt>
                       <dd>
-                        A student-led, collaborative advocacy organization structured around research, media production,
+                        A student led, collaborative advocacy organization structured around research, media production,
                         campus outreach, and school/barangay Digital Wellness Ambassadors working through open, flat
                         team communication.
                       </dd>
@@ -1046,9 +1046,9 @@ export default function HomePage() {
                     <div>
                       <dt>Communication Practice</dt>
                       <dd>
-                        Pairs research-backed statistics on Filipino screen addiction (averaging 10 hours and 14 minutes
-                        of daily screen time) with clear, actionable community calls to action: the 20-20-20 Rule
-                        (#AwareAndAwake), Screen-Free Bedtime Pledge, 7-Day Mindful Screen Challenge, and Hapag-Kainan,
+                        Pairs research backed statistics on Filipino screen addiction (averaging 10 hours and 14 minutes
+                        of daily screen time) with clear, actionable community calls to action: the 20/20/20 Rule
+                        (#AwareAndAwake), Screen Free Bedtime Pledge, 7 Day Mindful Screen Challenge, and Hapag Kainan,
                         Walang Gadget, to turn awareness into daily mindful habits.
                       </dd>
                     </div>
