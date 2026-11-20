@@ -1740,7 +1740,7 @@ h1, h2, h3, h4 {
     position: fixed;
     inset: auto;
     inset-block-start: 4.25rem;
-    inset-inline-start: 0.75rem;
+    inset-inline-end: 0.75rem;
     inline-size: min(86dvw, 20.5rem);
     block-size: fit-content;
     max-block-size: calc(100dvh - 5.25rem);
