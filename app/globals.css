@@ -1041,9 +1041,20 @@ h1, h2, h3, h4 {
 .theorist-portrait-card {
   margin: 0;
   padding: 0.75rem;
-  border: 1px dashed var(--border-strong);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   background: var(--bg-subtle);
+}
+
+.theorist-photo-img {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 13 / 16;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
 }
 
 .theorist-photo-box {
@@ -1313,6 +1324,124 @@ h1, h2, h3, h4 {
   font-size: 0.9375rem;
 }
 
+/* 06 Organizational Chart */
+.orgchart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+}
+
+.orgchart-root {
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
+}
+
+.orgchart-stem {
+  inline-size: 1px;
+  block-size: 1.75rem;
+  background-color: var(--border-strong);
+}
+
+.orgchart-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  inline-size: 100%;
+  padding-block-start: 1.5rem;
+}
+
+.orgchart-branches::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 12.5%;
+  inset-inline-end: 12.5%;
+  block-size: 1px;
+  background-color: var(--border-strong);
+}
+
+.orgchart-branch-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orgchart-branch-item::before {
+  content: "";
+  position: absolute;
+  inset-block-start: -1.5rem;
+  inset-inline-start: 50%;
+  inline-size: 1px;
+  block-size: 1.5rem;
+  background-color: var(--border-strong);
+}
+
+.orgchart-node {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.55rem;
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.orgchart-node:hover {
+  border-color: var(--accent);
+}
+
+.orgchart-node-lead {
+  max-inline-size: 260px;
+  border-color: var(--accent);
+}
+
+.orgchart-tier-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.orgchart-avatar {
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-subtle);
+}
+
+.orgchart-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.3;
+}
+
+.orgchart-role {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  line-height: 1.35;
+}
+
 /* Footer */
 .site-footer {
   padding-block-start: 1.25rem;
@@ -1407,6 +1536,26 @@ h1, h2, h3, h4 {
   .member-photo-frame,
   .theorist-portrait-card {
     max-inline-size: 220px;
+  }
+
+  .orgchart-branches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block-start: 1rem;
+  }
+
+  .orgchart-branches::before,
+  .orgchart-branch-item::before {
+    display: none;
+  }
+
+  .orgchart-stem {
+    block-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .orgchart-branches {
+    grid-template-columns: 1fr;
   }
 }
 

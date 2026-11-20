@@ -85,6 +85,7 @@ const NAV_ITEMS = [
   { id: "essence-reflections", label: "Reflections", filterText: "reflections essence importance footnotes" },
   { id: "commitments", label: "Commitments", filterText: "commitments discussed company" },
   { id: "company-details", label: "Company Details", filterText: "company details info profiles" },
+  { id: "org-chart", label: "Org Chart", filterText: "org chart organizational hierarchy structure team blueteeth" },
 ];
 
 export default function HomePage() {
@@ -398,6 +399,26 @@ export default function HomePage() {
                             <path d="M10 21v-4h4v4" />
                           </svg>
                         )}
+                        {item.id === "org-chart" && (
+                          <svg
+                            aria-hidden="true"
+                            className="nav-icon"
+                            width="17"
+                            height="17"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.75"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <rect x="9" y="3" width="6" height="5" rx="1" />
+                            <rect x="3" y="16" width="6" height="5" rx="1" />
+                            <rect x="15" y="16" width="6" height="5" rx="1" />
+                            <path d="M12 8v4" />
+                            <path d="M6 16v-4h12v4" />
+                          </svg>
+                        )}
                         <span className="nav-label">{item.label}</span>
                       </a>
                     </li>
@@ -672,12 +693,13 @@ export default function HomePage() {
 
               <div className="theorist-layout">
                 <figure className="theorist-portrait-card">
-                  <div className="theorist-photo-box" role="img" aria-label="Theorist photo upload placeholder">
-                    <strong>Theorist Photo</strong>
-                    <span>Upload portrait of Karl E. Weick (or your chosen theorist)</span>
-                  </div>
+                  <img
+                    src="/theorist/karl-weick.jpg"
+                    alt="Karl E. Weick"
+                    className="theorist-photo-img"
+                  />
                   <figcaption className="theorist-caption">
-                    Karl E. Weick (Placeholder)
+                    Karl E. Weick
                   </figcaption>
                 </figure>
 
@@ -967,6 +989,62 @@ export default function HomePage() {
                     </div>
                   </dl>
                 </article>
+              </div>
+            </section>
+
+            {/* 6. Organizational Chart */}
+            <section className="section-block" id="org-chart" tabIndex={-1}>
+              <div className="section-head">
+                <h2 className="section-title">Organizational Chart</h2>
+                <span className="section-tag">Team Blueteeth</span>
+              </div>
+              <p className="section-lead">
+                Our team structure and assigned roles in Team Blueteeth. Click any member to view their full profile.
+              </p>
+
+              <div className="orgchart-wrapper" aria-label="Team Blueteeth Organizational Chart">
+                <div className="orgchart-root">
+                  <button
+                    type="button"
+                    className="orgchart-node orgchart-node-lead"
+                    onClick={() => handleSidebarMemberClick(MEMBERS[0].id)}
+                  >
+                    <span className="orgchart-tier-badge">Team Lead</span>
+                    {MEMBERS[0].photo && (
+                      <img
+                        src={MEMBERS[0].photo}
+                        alt={MEMBERS[0].name}
+                        className="orgchart-avatar"
+                      />
+                    )}
+                    <h3 className="orgchart-name">{MEMBERS[0].name}</h3>
+                    <p className="orgchart-role">{MEMBERS[0].focus}</p>
+                  </button>
+                </div>
+
+                <div className="orgchart-stem" aria-hidden="true"></div>
+
+                <div className="orgchart-branches">
+                  {MEMBERS.slice(1).map((member) => (
+                    <div key={member.id} className="orgchart-branch-item">
+                      <button
+                        type="button"
+                        className="orgchart-node"
+                        onClick={() => handleSidebarMemberClick(member.id)}
+                      >
+                        {member.photo && (
+                          <img
+                            src={member.photo}
+                            alt={member.name}
+                            className="orgchart-avatar"
+                          />
+                        )}
+                        <h3 className="orgchart-name">{member.name}</h3>
+                        <p className="orgchart-role">{member.focus}</p>
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
             </section>
           </main>
