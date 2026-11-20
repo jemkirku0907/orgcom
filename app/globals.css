@@ -1775,10 +1775,20 @@ h1, h2, h3, h4 {
   }
 
   .masthead-top {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
     justify-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .logo-image {
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+  }
+
+  .org-heading-primary {
+    font-size: clamp(1.5rem, 6.5vw, 2.125rem);
   }
 
   .member-chip {

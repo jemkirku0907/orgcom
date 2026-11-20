@@ -1019,13 +1019,6 @@ export default function HomePage() {
                       <li>Youth Advocacy Media Production (MPAC.mp4)</li>
                     </ul>
                   </div>
-
-                  <div className="company-meta-block">
-                    <span className="company-fact-label">Members</span>
-                    <p>
-                      Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista
-                    </p>
-                  </div>
                 </article>
               </div>
             </section>
