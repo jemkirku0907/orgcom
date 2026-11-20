@@ -72,7 +72,6 @@ textarea {
 }
 
 p {
-  max-inline-size: 65ch;
   text-wrap: pretty;
 }
 
