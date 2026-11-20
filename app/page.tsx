@@ -141,7 +141,7 @@ export default function HomePage() {
   const activeReflectionMember = activeReflection
     ? MEMBERS.find((m) => m.id === activeReflection.memberId) || null
     : null;
-  const companyLogoSrc = isDarkMode ? "/logos/bjstu-logo-dark.jpg" : "/logos/bjstu-logo.jpg";
+  const companyLogoSrc = isDarkMode ? "/logos/bjstu-logo-dark.png" : "/logos/bjstu-logo.jpg";
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
@@ -785,11 +785,11 @@ export default function HomePage() {
             <section className="section-block" id="video-showcase" tabIndex={-1}>
               <div className="section-head">
                 <h2 className="section-title">Video Showcase</h2>
-                <span className="section-tag">1 min min – 3 min max</span>
+                <span className="section-tag">1 min min to 3 min max</span>
               </div>
               <p className="section-lead">
                 Our featured advocacy video (MPAC.mp4) introducing &ldquo;Awake and Aware: Students&apos; Mindful Screen
-                Habits&rdquo;—highlighting why Awake &amp; Aware Digital Wellness exists and how clear, mindful
+                Habits&rdquo;, highlighting why Awake &amp; Aware Digital Wellness exists and how clear, mindful
                 communication empowers Filipino students to scroll less and live more.
               </p>
 
@@ -810,13 +810,13 @@ export default function HomePage() {
                 <summary>Video Outline</summary>
                 <div className="transcript-content">
                   <p>
-                    <strong>0:00 – 0:35:</strong> Team introduction and overview of our organization.
+                    <strong>0:00 to 0:35:</strong> Team introduction and overview of our organization.
                   </p>
                   <p>
-                    <strong>0:35 – 1:45:</strong> Summary of our chosen communication theory and company commitments.
+                    <strong>0:35 to 1:45:</strong> Summary of our chosen communication theory and company commitments.
                   </p>
                   <p>
-                    <strong>1:45 – 2:30:</strong> Closing remarks and takeaways from OrgCom.
+                    <strong>1:45 to 2:30:</strong> Closing remarks and takeaways from OrgCom.
                   </p>
                 </div>
               </details>
@@ -981,9 +981,7 @@ export default function HomePage() {
                   <dl className="company-facts">
                     <div>
                       <dt>Tagline / Slogan</dt>
-                      <dd>
-                        Scroll less, Live more. — &ldquo;Digital Literacy for All, Mindful Habits for Everyone.&rdquo;
-                      </dd>
+                      <dd>&ldquo;DIGITAL WELLNESS FOR ALL, MINDFUL HABITS FOR EVERYONE&rdquo;</dd>
                     </div>
                     <div>
                       <dt>Industry / Focus</dt>
@@ -998,16 +996,18 @@ export default function HomePage() {
                     <div>
                       <dt>Mission</dt>
                       <dd>
-                        To build mindful digital tools, educational programs, and media campaigns that empower Filipino
-                        students, families, and communities to recognize screen addiction, practice healthier screen
-                        habits, and live balanced lives beyond the screen—one screen-free moment at a time.
+                        Committed to designing accessible digital wellness tools, educational programs, and community
+                        campaigns that empower Filipinos of all ages to overcome screen addiction, adopt healthier
+                        digital habits, and build a culture of mindful technology use, one school, one workplace, one
+                        family, and one screen-free moment at a time.
                       </dd>
                     </div>
                     <div>
                       <dt>Vision</dt>
                       <dd>
-                        A Filipino society where every individual, from students to adults, is awake, aware, and in
-                        control of their relationship with technology, living balanced lives beyond the screen.
+                        A Filipino society powered by mindful technology, where every student, family, and professional
+                        is awake, aware, and in control of their relationship with screens, living healthier, balanced
+                        lives beyond the screen.
                       </dd>
                     </div>
                     <div>
@@ -1047,9 +1047,9 @@ export default function HomePage() {
                       <dt>Communication Practice</dt>
                       <dd>
                         Pairs research-backed statistics on Filipino screen addiction (averaging 10 hours and 14 minutes
-                        of daily screen time) with clear, actionable community calls to action—the 20-20-20 Rule
+                        of daily screen time) with clear, actionable community calls to action: the 20-20-20 Rule
                         (#AwareAndAwake), Screen-Free Bedtime Pledge, 7-Day Mindful Screen Challenge, and Hapag-Kainan,
-                        Walang Gadget—to turn awareness into daily mindful habits.
+                        Walang Gadget, to turn awareness into daily mindful habits.
                       </dd>
                     </div>
                     <div>
@@ -1124,7 +1124,7 @@ export default function HomePage() {
 
           <footer className="site-footer">
             <p>
-              <strong>ORGCOM · Team Blueteeth</strong> — University of Makati
+              <strong>ORGCOM · Team Blueteeth</strong> · University of Makati
             </p>
             <p className="footer-sub">
               Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista

@@ -587,7 +587,12 @@ h1, h2, h3, h4 {
 }
 
 :root[data-theme="dark"] .workspace-avatar-img {
-  background-color: var(--bg-subtle);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+:root[data-theme="dark"] .logo-upload-box {
+  background-color: transparent;
 }
 
 .mobile-nav-backdrop {
