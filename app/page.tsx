@@ -648,12 +648,6 @@ export default function HomePage() {
                 <h1 id="main-heading" className="org-heading-primary" tabIndex={-1}>
                   ORGCOM
                 </h1>
-                <h2 className="org-heading-secondary">
-                  Organizational Communication · Team Blueteeth
-                </h2>
-                <p className="masthead-subtitle">
-                  Organizational Communication, Team Blueteeth, University of Makati.
-                </p>
               </div>
 
               {/* Company logo */}
@@ -1087,9 +1081,6 @@ export default function HomePage() {
           <footer className="site-footer">
             <p>
               <strong>ORGCOM · Team Blueteeth</strong> · University of Makati
-            </p>
-            <p className="footer-sub">
-              Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista
             </p>
           </footer>
         </div>
