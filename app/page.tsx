@@ -78,6 +78,44 @@ const MEMBERS: MemberProfile[] = [
   },
 ];
 
+const MEMBER_REFLECTIONS = [
+  {
+    memberId: "jemkirk",
+    memberLabel: "Member 1",
+    body: "Taking Organizational Communication changed how I look at working inside a team or company. Before this subject, I thought leadership was mostly about giving instructions from the top. Through our lessons, I learned that teams perform better when everyone can share feedback openly and respectfully. Studying communication theories also helped me see how misunderstandings start and how we can prevent them early. Overall, this course gave me practical habits I can carry into my future workplace.",
+    footnoteMark: "¹",
+    footnote: "Good teamwork starts when people listen before they respond.",
+  },
+  {
+    memberId: "kirk",
+    memberLabel: "Member 2",
+    body: "Organizational Communication showed me how everyday messages shape the culture of a group. While working on our projects, I realized that keeping instructions clear saves time and avoids confusion among teammates. Learning about formal and informal communication channels also helped me understand why transparency matters in a company. Looking at different organizational theorists gave me a helpful way to analyze real workplace situations. I plan to apply these communication skills in every group and job I join after graduation.",
+    footnoteMark: "²",
+    footnote: "Clear communication keeps both design work and team goals aligned.",
+  },
+  {
+    memberId: "romaine",
+    memberLabel: "Member 3",
+    body: "Before taking OrgCom, I did not realize how much internal communication affects morale and productivity. Each topic reminded me that clear dialogue connects company plans to daily work. I especially appreciated learning how different leadership styles encourage people to speak up without fear. Collaborating with our team on this page also taught me how to give helpful feedback while staying respectful. This subject gave me stronger confidence when sharing ideas in both class and professional settings.",
+    footnoteMark: "³",
+    footnote: "Listening well is just as important as speaking clearly.",
+  },
+  {
+    memberId: "jhonloyd",
+    memberLabel: "Member 4",
+    body: "This course connected classroom lessons to real challenges that employees and managers face every day. I learned that careful documentation and active listening protect teams from costly mistakes. Discussing real company commitments showed me that organizations earn trust when their actions match their words. Working with my groupmates also helped me communicate more clearly when we had tight deadlines. In the end, OrgCom taught me that healthy organizations depend on honest, respectful communication.",
+    footnoteMark: "⁴",
+    footnote: "Consistency between words and actions builds lasting trust.",
+  },
+  {
+    memberId: "john",
+    memberLabel: "Member 5",
+    body: "Studying Organizational Communication gave me a clearer view of how companies present themselves to people inside and outside the organization. Planning our short video required organizing our ideas so viewers could understand our message in under three minutes. Through that task, I noticed how tone, pacing, and clear structure affect how an audience responds. Our group discussions also showed me that transparency helps teammates stay focused on the same goal. This subcourse gave me communication standards that I can rely on in any future career.",
+    footnoteMark: "⁵",
+    footnote: "A clear message is easier to remember and act on.",
+  },
+];
+
 const NAV_ITEMS = [
   { id: "overview", label: "Overview", filterText: "overview header roster umak" },
   { id: "video-showcase", label: "Video Showcase", filterText: "video showcase embed 1min 3min" },
@@ -92,11 +130,33 @@ export default function HomePage() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMemberKey, setActiveMemberKey] = useState<string | null>(null);
+  const [activeReflectionId, setActiveReflectionId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeSection, setActiveSection] = useState("overview");
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const activeProfile = MEMBERS.find((m) => m.id === activeMemberKey) || null;
+  const activeReflection = MEMBER_REFLECTIONS.find((r) => r.memberId === activeReflectionId) || null;
+  const activeReflectionMember = activeReflection
+    ? MEMBERS.find((m) => m.id === activeReflection.memberId) || null
+    : null;
+
+  // Close reflection modal on Escape and lock body scroll while open
+  useEffect(() => {
+    if (!activeReflectionId) return;
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveReflectionId(null);
+      }
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleEsc);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [activeReflectionId]);
 
   // Toggle or select member spotlight
   const handleSelectMember = (id: string, forceOpen = false) => {
@@ -750,140 +810,34 @@ export default function HomePage() {
 
               <h3 className="subsection-heading">Member Reflections</h3>
               <div className="reflections-grid">
-                <article className="reflection-card">
-                  <header className="reflection-header">
-                    <span className="reflection-initials avatar-jemkirk" aria-hidden="true">
-                      J
-                    </span>
-                    <div>
-                      <h4>Jemkirk Utana</h4>
-                      <p className="reflection-role">Member 1</p>
-                    </div>
-                  </header>
-                  <p className="reflection-body">
-                    Taking Organizational Communication changed how I look at working inside a team or company. Before
-                    this subject, I thought leadership was mostly about giving instructions from the top. Through our
-                    lessons, I learned that teams perform better when everyone can share feedback openly and
-                    respectfully. Studying communication theories also helped me see how misunderstandings start and
-                    how we can prevent them early. Overall, this course gave me practical habits I can carry into my
-                    future workplace.
-                  </p>
-                  <footer className="reflection-footnote">
-                    <span className="fn-mark">¹</span>
-                    <p>
-                      <strong>Footnote by Jemkirk Utana:</strong> Good teamwork starts when people listen before they
-                      respond.
-                    </p>
-                  </footer>
-                </article>
+                {MEMBER_REFLECTIONS.map((item) => {
+                  const member = MEMBERS.find((m) => m.id === item.memberId);
+                  if (!member) return null;
 
-                <article className="reflection-card">
-                  <header className="reflection-header">
-                    <span className="reflection-initials avatar-kirk" aria-hidden="true">
-                      K
-                    </span>
-                    <div>
-                      <h4>Kirk Stanley Tan</h4>
-                      <p className="reflection-role">Member 2</p>
-                    </div>
-                  </header>
-                  <p className="reflection-body">
-                    Organizational Communication showed me how everyday messages shape the culture of a group. While
-                    working on our projects, I realized that keeping instructions clear saves time and avoids
-                    confusion among teammates. Learning about formal and informal communication channels also helped me
-                    understand why transparency matters in a company. Looking at different organizational theorists
-                    gave me a helpful way to analyze real workplace situations. I plan to apply these communication
-                    skills in every group and job I join after graduation.
-                  </p>
-                  <footer className="reflection-footnote">
-                    <span className="fn-mark">²</span>
-                    <p>
-                      <strong>Footnote by Kirk Stanley Tan:</strong> Clear communication keeps both design work and
-                      team goals aligned.
-                    </p>
-                  </footer>
-                </article>
-
-                <article className="reflection-card">
-                  <header className="reflection-header">
-                    <span className="reflection-initials avatar-romaine" aria-hidden="true">
-                      R
-                    </span>
-                    <div>
-                      <h4>Romaine Klaire Sison</h4>
-                      <p className="reflection-role">Member 3</p>
-                    </div>
-                  </header>
-                  <p className="reflection-body">
-                    Before taking OrgCom, I did not realize how much internal communication affects morale and
-                    productivity. Each topic reminded me that clear dialogue connects company plans to daily work. I
-                    especially appreciated learning how different leadership styles encourage people to speak up
-                    without fear. Collaborating with our team on this page also taught me how to give helpful feedback
-                    while staying respectful. This subject gave me stronger confidence when sharing ideas in both class
-                    and professional settings.
-                  </p>
-                  <footer className="reflection-footnote">
-                    <span className="fn-mark">³</span>
-                    <p>
-                      <strong>Footnote by Romaine Klaire Sison:</strong> Listening well is just as important as speaking
-                      clearly.
-                    </p>
-                  </footer>
-                </article>
-
-                <article className="reflection-card">
-                  <header className="reflection-header">
-                    <span className="reflection-initials avatar-jhonloyd" aria-hidden="true">
-                      J
-                    </span>
-                    <div>
-                      <h4>Jhonloyd Jalea</h4>
-                      <p className="reflection-role">Member 4</p>
-                    </div>
-                  </header>
-                  <p className="reflection-body">
-                    This course connected classroom lessons to real challenges that employees and managers face every
-                    day. I learned that careful documentation and active listening protect teams from costly mistakes.
-                    Discussing real company commitments showed me that organizations earn trust when their actions match
-                    their words. Working with my groupmates also helped me communicate more clearly when we had tight
-                    deadlines. In the end, OrgCom taught me that healthy organizations depend on honest, respectful
-                    communication.
-                  </p>
-                  <footer className="reflection-footnote">
-                    <span className="fn-mark">⁴</span>
-                    <p>
-                      <strong>Footnote by Jhonloyd Jalea:</strong> Consistency between words and actions builds lasting
-                      trust.
-                    </p>
-                  </footer>
-                </article>
-
-                <article className="reflection-card">
-                  <header className="reflection-header">
-                    <span className="reflection-initials avatar-john" aria-hidden="true">
-                      J
-                    </span>
-                    <div>
-                      <h4>John Michael Bautista</h4>
-                      <p className="reflection-role">Member 5</p>
-                    </div>
-                  </header>
-                  <p className="reflection-body">
-                    Studying Organizational Communication gave me a clearer view of how companies present themselves
-                    to people inside and outside the organization. Planning our short video required organizing our
-                    ideas so viewers could understand our message in under three minutes. Through that task, I noticed
-                    how tone, pacing, and clear structure affect how an audience responds. Our group discussions also
-                    showed me that transparency helps teammates stay focused on the same goal. This subcourse gave me
-                    communication standards that I can rely on in any future career.
-                  </p>
-                  <footer className="reflection-footnote">
-                    <span className="fn-mark">⁵</span>
-                    <p>
-                      <strong>Footnote by John Michael Bautista:</strong> A clear message is easier to remember and
-                      act on.
-                    </p>
-                  </footer>
-                </article>
+                  return (
+                    <article key={item.memberId} className="reflection-card">
+                      <header className="reflection-header">
+                        <span className={`reflection-initials ${member.avatarClass}`} aria-hidden="true">
+                          {member.avatarLetter}
+                        </span>
+                        <div>
+                          <h4>{member.name}</h4>
+                          <p className="reflection-role">{item.memberLabel}</p>
+                        </div>
+                      </header>
+                      <p className="reflection-body reflection-preview">{item.body}</p>
+                      <div className="reflection-card-actions">
+                        <button
+                          type="button"
+                          className="reflection-see-more-btn"
+                          onClick={() => setActiveReflectionId(item.memberId)}
+                        >
+                          See more
+                        </button>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </section>
 
@@ -1059,6 +1013,73 @@ export default function HomePage() {
           </footer>
         </div>
       </div>
+
+      {/* Reflection Popup Modal */}
+      {activeReflection && activeReflectionMember && (
+        <div
+          className="reflection-modal-backdrop"
+          role="presentation"
+          onClick={() => setActiveReflectionId(null)}
+        >
+          <div
+            className="reflection-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reflection-modal-heading"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="reflection-modal-top">
+              <div>
+                <p className="spotlight-role">
+                  {activeReflection.memberLabel} · {activeReflectionMember.focus}
+                </p>
+                <h3 className="reflection-modal-title" id="reflection-modal-heading">
+                  {activeReflectionMember.name}
+                </h3>
+              </div>
+              <button
+                type="button"
+                className="close-drawer-btn"
+                onClick={() => setActiveReflectionId(null)}
+                aria-label="Close reflection"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="reflection-modal-layout">
+              <div>
+                {activeReflectionMember.photo ? (
+                  <img
+                    src={activeReflectionMember.photo}
+                    alt={activeReflectionMember.name}
+                    className="reflection-modal-photo"
+                  />
+                ) : (
+                  <div className="photo-placeholder-box" role="img" aria-label="Member photo">
+                    <span
+                      className={`photo-initials-circle ${activeReflectionMember.avatarClass}`}
+                    >
+                      {activeReflectionMember.avatarLetter}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <p className="reflection-modal-body">{activeReflection.body}</p>
+                <footer className="reflection-footnote">
+                  <span className="fn-mark">{activeReflection.footnoteMark}</span>
+                  <p>
+                    <strong>Footnote by {activeReflectionMember.name}:</strong>{" "}
+                    {activeReflection.footnote}
+                  </p>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

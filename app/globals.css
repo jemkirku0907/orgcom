@@ -1213,6 +1213,120 @@ h1, h2, h3, h4 {
   flex: 1 1 auto;
 }
 
+.reflection-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reflection-card-actions {
+  margin-block-start: 0.9rem;
+  padding-block-start: 0.7rem;
+  border-block-start: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reflection-see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-block-size: 2.1rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  color: var(--ink-primary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.reflection-see-more-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Reflection Popup Modal */
+.reflection-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(17, 24, 39, 0.5);
+}
+
+.reflection-modal {
+  inline-size: min(100%, 680px);
+  max-block-size: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.reflection-modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: 1rem;
+  border-block-end: 1px solid var(--border-subtle);
+  margin-block-end: 1.25rem;
+}
+
+.reflection-modal-title {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.reflection-modal-layout {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.reflection-modal-photo {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-subtle);
+}
+
+.reflection-modal-body {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--ink-secondary);
+}
+
+@media (max-width: 640px) {
+  .reflection-modal {
+    padding: 1.15rem;
+  }
+
+  .reflection-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reflection-modal-photo {
+    max-inline-size: 180px;
+  }
+}
+
 .reflection-footnote {
   display: flex;
   align-items: flex-start;
