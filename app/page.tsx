@@ -134,6 +134,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeSection, setActiveSection] = useState("overview");
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isClientMounted, setIsClientMounted] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const activeProfile = MEMBERS.find((m) => m.id === activeMemberKey) || null;
@@ -145,6 +146,7 @@ export default function HomePage() {
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
+    setIsClientMounted(true);
     const stored = window.localStorage.getItem("orgcom-theme");
     const prefersDark =
       stored === "dark" ||
@@ -239,9 +241,13 @@ export default function HomePage() {
 
     sections.forEach((sec) => observer.observe(sec));
     return () => observer.disconnect();
-  }, []);
+  }, [isClientMounted]);
 
   const query = searchQuery.trim().toLowerCase();
+
+  if (!isClientMounted) {
+    return <div style={{ minHeight: "100dvh" }} aria-busy="true" />;
+  }
 
   return (
     <>
