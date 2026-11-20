@@ -474,15 +474,13 @@ export default function HomePage() {
           {/* Masthead & Executive Team Roster */}
           <header className="masthead" id="overview" tabIndex={-1}>
             <div className="masthead-top">
-              {/* UMak Logo Upload Placeholder */}
+              {/* UMak logo */}
               <div className="logo-upload-box">
-                <div className="logo-placeholder-square" aria-label="UMak logo upload placeholder">
-                  Logo
-                </div>
-                <div className="logo-caption">
-                  <span className="logo-label">UMak Logo</span>
-                  <span className="logo-hint">Upload placeholder</span>
-                </div>
+                <img
+                  src="/logos/umak-logo.png"
+                  alt="University of Makati Logo"
+                  className="logo-image"
+                />
               </div>
 
               {/* Centered Headings */}
