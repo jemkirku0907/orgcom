@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ORGCOM | Organizational Communication · Team Blueteeth",
+  title: "ORGCOM TEAM BLUETEETH",
   description: "Organizational Communication showcase for Team Blueteeth, University of Makati.",
 };
 

@@ -788,7 +788,9 @@ export default function HomePage() {
                 <span className="section-tag">1 min min – 3 min max</span>
               </div>
               <p className="section-lead">
-                A short 1 to 3 minute video introducing our group, our company idea, and how we communicate as a team.
+                Our featured advocacy video (MPAC.mp4) introducing &ldquo;Awake and Aware: Students&apos; Mindful Screen
+                Habits&rdquo;—highlighting why Awake &amp; Aware Digital Wellness exists and how clear, mindful
+                communication empowers Filipino students to scroll less and live more.
               </p>
 
               <div className="video-stage" role="group" aria-label="ORGCOM video showcase, 16 by 9 aspect ratio">
@@ -967,19 +969,25 @@ export default function HomePage() {
                 <h2 className="section-title">Company Details</h2>
               </div>
               <p className="section-lead">
-                Basic profile and background information about our company.
+                Basic profile and background information about our featured companies.
               </p>
 
               <div className="companies-grid">
                 <article className="company-profile-card">
                   <div className="company-card-top">
                     <span className="company-label">Our Company</span>
-                    <h3>[Insert Company Name]</h3>
+                    <h3>Awake &amp; Aware Digital Wellness</h3>
                   </div>
                   <dl className="company-facts">
                     <div>
+                      <dt>Tagline / Slogan</dt>
+                      <dd>
+                        Scroll less, Live more. — &ldquo;Digital Literacy for All, Mindful Habits for Everyone.&rdquo;
+                      </dd>
+                    </div>
+                    <div>
                       <dt>Industry / Focus</dt>
-                      <dd>[Insert industry or business focus]</dd>
+                      <dd>Digital Wellness Technology, EdTech &amp; Youth Media Advocacy (Social Enterprise)</dd>
                     </div>
                     <div>
                       <dt>Members</dt>
@@ -989,11 +997,68 @@ export default function HomePage() {
                     </div>
                     <div>
                       <dt>Mission</dt>
-                      <dd>[Insert short company mission statement]</dd>
+                      <dd>
+                        To build mindful digital tools, educational programs, and media campaigns that empower Filipino
+                        students, families, and communities to recognize screen addiction, practice healthier screen
+                        habits, and live balanced lives beyond the screen—one screen-free moment at a time.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Vision</dt>
+                      <dd>
+                        A Filipino society where every individual, from students to adults, is awake, aware, and in
+                        control of their relationship with technology, living balanced lives beyond the screen.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Products &amp; Services</dt>
+                      <dd>
+                        Awake &amp; Aware Mindful Screen App (20-20-20 Rule timer, Bedtime Screen-Free Pledge mode,
+                        7-Day Mindful Screen Challenge tracker), School &amp; Barangay Digital Wellness Workshops,
+                        Hapag-Kainan Walang Gadget Family Kits, and Youth Advocacy Media Production (MPAC.mp4).
+                      </dd>
                     </div>
                     <div>
                       <dt>Location &amp; Contact</dt>
-                      <dd>Makati City · [Insert email or contact details]</dd>
+                      <dd>Makati City · awakeandaware.blueteeth@gmail.com · #AwareAndAwake</dd>
+                    </div>
+                  </dl>
+                </article>
+
+                <article className="company-profile-card">
+                  <div className="company-card-top">
+                    <span className="company-label">Discussed Company</span>
+                    <h3>BJMSTTU (Brigade of Junior Media Students for Truth, Transparency, and Unity)</h3>
+                  </div>
+                  <dl className="company-facts">
+                    <div>
+                      <dt>Sector</dt>
+                      <dd>Student-Led Media Advocacy, Digital Literacy &amp; Youth Digital Well-being</dd>
+                    </div>
+                    <div>
+                      <dt>Structure</dt>
+                      <dd>
+                        A student-led, collaborative advocacy organization structured around research, media production,
+                        campus outreach, and school/barangay Digital Wellness Ambassadors working through open, flat
+                        team communication.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Communication Practice</dt>
+                      <dd>
+                        Pairs research-backed statistics on Filipino screen addiction (averaging 10 hours and 14 minutes
+                        of daily screen time) with clear, actionable community calls to action—the 20-20-20 Rule
+                        (#AwareAndAwake), Screen-Free Bedtime Pledge, 7-Day Mindful Screen Challenge, and Hapag-Kainan,
+                        Walang Gadget—to turn awareness into daily mindful habits.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Reference</dt>
+                      <dd>
+                        MPAC Campaign (&ldquo;Awake and Aware: Students&apos; Mindful Screen Habits&rdquo;) &amp;
+                        MPAC.mp4 Advocacy Video; citing DataReportal (2023), WHO (2022), DepEd (2022), PLOS Global
+                        Public Health (2025), and Sen. Lacson&apos;s July 2025 social media regulation bill for minors.
+                      </dd>
                     </div>
                   </dl>
                 </article>

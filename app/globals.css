@@ -1451,9 +1451,8 @@ h1, h2, h3, h4 {
 /* 05 Company Details */
 .companies-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1rem;
-  max-inline-size: 680px;
 }
 
 .company-profile-card {
