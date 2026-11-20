@@ -133,6 +133,7 @@ export default function HomePage() {
   const [activeReflectionId, setActiveReflectionId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeSection, setActiveSection] = useState("overview");
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const activeProfile = MEMBERS.find((m) => m.id === activeMemberKey) || null;
@@ -140,6 +141,26 @@ export default function HomePage() {
   const activeReflectionMember = activeReflection
     ? MEMBERS.find((m) => m.id === activeReflection.memberId) || null
     : null;
+  const companyLogoSrc = isDarkMode ? "/logos/bjstu-logo-dark.jpg" : "/logos/bjstu-logo.jpg";
+
+  // Initialize theme from localStorage or system preference
+  useEffect(() => {
+    const stored = window.localStorage.getItem("orgcom-theme");
+    const prefersDark =
+      stored === "dark" ||
+      (stored === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setIsDarkMode(prefersDark);
+    document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.dataset.theme = next ? "dark" : "light";
+      window.localStorage.setItem("orgcom-theme", next ? "dark" : "light");
+      return next;
+    });
+  };
 
   // Close reflection modal on Escape and lock body scroll while open
   useEffect(() => {
@@ -234,7 +255,7 @@ export default function HomePage() {
           <div className="sidebar-workspace-bar">
             <div className="workspace-card">
               <img
-                src="/logos/bjstu-logo.jpg"
+                src={companyLogoSrc}
                 alt="Team Blueteeth (BJSTU) Logo"
                 className="workspace-avatar-img"
               />
@@ -292,6 +313,14 @@ export default function HomePage() {
               <span>Menu</span>
             </button>
           </div>
+
+          {isMobileMenuOpen && (
+            <div
+              className="mobile-nav-backdrop"
+              aria-hidden="true"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          )}
 
           <div className={`sidebar-drawer ${isMobileMenuOpen ? "is-open" : ""}`} id="primary-nav-drawer">
             <div className="sidebar-search">
@@ -551,7 +580,55 @@ export default function HomePage() {
               <span aria-hidden="true">/</span>
               <span>Team Blueteeth</span>
             </p>
-            <span className="topbar-status">University of Makati · Due Nov 20</span>
+            <div className="topbar-right">
+              <span className="topbar-status">University of Makati · Due Nov 20</span>
+              <button
+                type="button"
+                className="theme-toggle-btn"
+                onClick={toggleTheme}
+                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+                aria-pressed={isDarkMode}
+              >
+                {isDarkMode ? (
+                  <svg
+                    aria-hidden="true"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                  </svg>
+                ) : (
+                  <svg
+                    aria-hidden="true"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                  </svg>
+                )}
+                <span>{isDarkMode ? "Light" : "Dark"}</span>
+              </button>
+            </div>
           </div>
 
           {/* Masthead & Executive Team Roster */}
@@ -582,7 +659,7 @@ export default function HomePage() {
               {/* Company logo */}
               <div className="logo-upload-box">
                 <img
-                  src="/logos/bjstu-logo.jpg"
+                  src={companyLogoSrc}
                   alt="Team Blueteeth (BJSTU) Logo"
                   className="logo-image"
                 />
@@ -890,7 +967,7 @@ export default function HomePage() {
                 <h2 className="section-title">Company Details</h2>
               </div>
               <p className="section-lead">
-                Basic profile and background information about our featured companies.
+                Basic profile and background information about our company.
               </p>
 
               <div className="companies-grid">
@@ -917,31 +994,6 @@ export default function HomePage() {
                     <div>
                       <dt>Location &amp; Contact</dt>
                       <dd>Makati City · [Insert email or contact details]</dd>
-                    </div>
-                  </dl>
-                </article>
-
-                <article className="company-profile-card">
-                  <div className="company-card-top">
-                    <span className="company-label">Discussed Company</span>
-                    <h3>[Insert Partner / Case Company Name]</h3>
-                  </div>
-                  <dl className="company-facts">
-                    <div>
-                      <dt>Sector</dt>
-                      <dd>[Insert sector or industry]</dd>
-                    </div>
-                    <div>
-                      <dt>Structure</dt>
-                      <dd>[Insert brief summary of team or organizational setup]</dd>
-                    </div>
-                    <div>
-                      <dt>Communication Practice</dt>
-                      <dd>[Insert discussed company practices and communication highlights]</dd>
-                    </div>
-                    <div>
-                      <dt>Reference</dt>
-                      <dd>[Insert website or source notes]</dd>
                     </div>
                   </dl>
                 </article>
