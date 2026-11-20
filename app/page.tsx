@@ -233,9 +233,11 @@ export default function HomePage() {
         <aside className="sidebar" id="sidebar">
           <div className="sidebar-workspace-bar">
             <div className="workspace-card">
-              <span className="workspace-avatar" aria-hidden="true">
-                OC
-              </span>
+              <img
+                src="/logos/bjstu-logo.jpg"
+                alt="Team Blueteeth (BJSTU) Logo"
+                className="workspace-avatar-img"
+              />
               <div className="workspace-meta">
                 <span className="workspace-name">ORGCOM</span>
                 <span className="workspace-sub">UMak · Team Blueteeth</span>
@@ -580,8 +582,8 @@ export default function HomePage() {
               {/* Company logo */}
               <div className="logo-upload-box">
                 <img
-                  src="/assets/company-logo.png"
-                  alt=""
+                  src="/logos/bjstu-logo.jpg"
+                  alt="Team Blueteeth (BJSTU) Logo"
                   className="logo-image"
                 />
               </div>

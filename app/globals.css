@@ -161,6 +161,17 @@ h1, h2, h3, h4 {
   letter-spacing: 0.03em;
 }
 
+.workspace-avatar-img {
+  display: block;
+  flex-shrink: 0;
+  inline-size: 2.15rem;
+  block-size: 2.15rem;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  background-color: #ffffff;
+}
+
 .workspace-meta {
   display: flex;
   flex-direction: column;
@@ -216,6 +227,7 @@ h1, h2, h3, h4 {
 }
 
 .app-shell.is-sidebar-collapsed .workspace-avatar,
+.app-shell.is-sidebar-collapsed .workspace-avatar-img,
 .app-shell.is-sidebar-collapsed .workspace-meta,
 .app-shell.is-sidebar-collapsed .sidebar-search,
 .app-shell.is-sidebar-collapsed .nav-group-label,
