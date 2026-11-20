@@ -1460,53 +1460,110 @@ h1, h2, h3, h4 {
 }
 
 .company-profile-card {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   background: var(--bg-surface);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .company-card-top {
-  padding-block-end: 0.75rem;
+  padding-block-end: 1rem;
   border-block-end: 1px solid var(--border-subtle);
-  margin-block-end: 1rem;
+  text-align: center;
 }
 
 .company-label {
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
 .company-card-top h3 {
-  margin: 0.3rem 0 0;
-  font-size: 1.125rem;
-  font-weight: 600;
+  margin: 0.25rem 0 0;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: var(--ink-primary);
 }
 
-.company-facts {
-  display: grid;
-  gap: 0.95rem;
-  margin: 0;
+.company-tagline {
+  margin: 0.45rem auto 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-secondary);
 }
 
-.company-facts dt {
+.company-mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.company-subcard {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+}
+
+.company-subcard p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--ink-secondary);
+}
+
+.company-fact-label {
+  display: block;
   font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
 
-.company-facts dd {
-  margin: 0.2rem auto 0;
-  max-inline-size: 70ch;
-  color: var(--ink-primary);
+.company-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.company-meta-item p,
+.company-meta-block p {
+  margin: 0.25rem 0 0;
   font-size: 0.9375rem;
+  color: var(--ink-primary);
+}
+
+.company-meta-block {
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.company-services-list {
+  margin: 0.45rem 0 0;
+  padding-inline-start: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9375rem;
+  color: var(--ink-secondary);
+}
+
+@media (max-width: 720px) {
+  .company-profile-card {
+    padding: 1.15rem;
+  }
+
+  .company-mv-grid,
+  .company-meta-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 06 Organizational Chart */

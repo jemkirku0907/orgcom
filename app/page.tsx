@@ -971,52 +971,61 @@ export default function HomePage() {
                   <div className="company-card-top">
                     <span className="company-label">Our Company</span>
                     <h3>A &amp; A (Awake and Aware)</h3>
+                    <p className="company-tagline">
+                      &ldquo;DIGITAL WELLNESS FOR ALL, MINDFUL HABITS FOR EVERYONE&rdquo;
+                    </p>
                   </div>
-                  <dl className="company-facts">
-                    <div>
-                      <dt>Tagline / Slogan</dt>
-                      <dd>&ldquo;DIGITAL WELLNESS FOR ALL, MINDFUL HABITS FOR EVERYONE&rdquo;</dd>
-                    </div>
-                    <div>
-                      <dt>Industry / Focus</dt>
-                      <dd>Digital Wellness Technology, EdTech &amp; Youth Media Advocacy (Social Enterprise)</dd>
-                    </div>
-                    <div>
-                      <dt>Members</dt>
-                      <dd>
-                        Jemkirk Utana, Kirk Stanley Tan, Romaine Klaire Sison, Jhonloyd Jalea, John Michael Bautista
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Mission</dt>
-                      <dd>
+
+                  <div className="company-mv-grid">
+                    <div className="company-subcard">
+                      <span className="company-fact-label">Mission</span>
+                      <p>
                         Committed to designing accessible digital wellness tools, educational programs, and community
                         campaigns that empower Filipinos of all ages to overcome screen addiction, adopt healthier
                         digital habits, and build a culture of mindful technology use, one school, one workplace, one
                         family, and one screen free moment at a time.
-                      </dd>
+                      </p>
                     </div>
-                    <div>
-                      <dt>Vision</dt>
-                      <dd>
+                    <div className="company-subcard">
+                      <span className="company-fact-label">Vision</span>
+                      <p>
                         A Filipino society powered by mindful technology, where every student, family, and professional
                         is awake, aware, and in control of their relationship with screens, living healthier, balanced
                         lives beyond the screen.
-                      </dd>
+                      </p>
                     </div>
-                    <div>
-                      <dt>Products &amp; Services</dt>
-                      <dd>
-                        Awake &amp; Aware Mindful Screen App (20/20/20 Rule timer, Bedtime Screen Free Pledge mode,
-                        7 Day Mindful Screen Challenge tracker), School &amp; Barangay Digital Wellness Workshops,
-                        Hapag Kainan Walang Gadget Family Kits, and Youth Advocacy Media Production (MPAC.mp4).
-                      </dd>
+                  </div>
+
+                  <div className="company-meta-grid">
+                    <div className="company-meta-item">
+                      <span className="company-fact-label">Industry / Focus</span>
+                      <p>Digital Wellness Technology, EdTech &amp; Youth Media Advocacy (Social Enterprise)</p>
                     </div>
-                    <div>
-                      <dt>Location &amp; Contact</dt>
-                      <dd>Makati City · awakeandaware.blueteeth@gmail.com · #AwareAndAwake</dd>
+                    <div className="company-meta-item">
+                      <span className="company-fact-label">Location &amp; Contact</span>
+                      <p>Makati City · awakeandaware.blueteeth@gmail.com · #AwareAndAwake</p>
                     </div>
-                  </dl>
+                  </div>
+
+                  <div className="company-meta-block">
+                    <span className="company-fact-label">Products &amp; Services</span>
+                    <ul className="company-services-list">
+                      <li>
+                        Awake &amp; Aware Mindful Screen App (20/20/20 Rule timer, Bedtime Screen Free Pledge mode, 7
+                        Day Mindful Screen Challenge tracker)
+                      </li>
+                      <li>School &amp; Barangay Digital Wellness Workshops</li>
+                      <li>Hapag Kainan Walang Gadget Family Kits</li>
+                      <li>Youth Advocacy Media Production (MPAC.mp4)</li>
+                    </ul>
+                  </div>
+
+                  <div className="company-meta-block">
+                    <span className="company-fact-label">Members</span>
+                    <p>
+                      Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista
+                    </p>
+                  </div>
                 </article>
               </div>
             </section>
