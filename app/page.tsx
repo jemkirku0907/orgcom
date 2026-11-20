@@ -22,9 +22,9 @@ const MEMBERS: MemberProfile[] = [
     initials: "J.U.",
     avatarLetter: "J",
     avatarClass: "avatar-jemkirk",
-    role: "Project Manager / Developer · Section II-ACSAD",
+    role: "Project Manager / Developer · Team Blueteeth",
     focus: "Project Manager / Developer",
-    bio: "I serve as the Project Manager and Developer for our group in Section II-ACSAD. I coordinate our tasks and deadlines, and build and maintain this ORGCOM web page.",
+    bio: "I serve as the Project Manager and Developer for Team Blueteeth. I coordinate our tasks and deadlines, and build and maintain this ORGCOM web page.",
     photo: "/members/jemkirk.jpg",
     filterText: "jemkirk utana j project manager developer",
   },
@@ -34,7 +34,7 @@ const MEMBERS: MemberProfile[] = [
     initials: "K.S.T.",
     avatarLetter: "K",
     avatarClass: "avatar-kirk",
-    role: "Team Member · Section II-ACSAD",
+    role: "Team Member · Team Blueteeth",
     focus: "Aspiring Developer",
     bio: "A passionate learner, aspiring developer, and someone who enjoys turning ideas into reality.",
     photo: "/members/kirk.png",
@@ -46,9 +46,9 @@ const MEMBERS: MemberProfile[] = [
     initials: "R.K.S.",
     avatarLetter: "R",
     avatarClass: "avatar-romaine",
-    role: "Documentation Specialist & Researcher · Section II-ACSAD",
+    role: "Documentation Specialist & Researcher · Team Blueteeth",
     focus: "Documentation & Research",
-    bio: "As a Documentation Specialist and Researcher, I focus on uncovering user needs and translating technical workflows into clear, accessible guides—keeping both our team and our users on the same page.",
+    bio: "As a Documentation Specialist and Researcher, I focus on uncovering user needs and translating technical workflows into clear, accessible guides keeping both our team and our users on the same page.",
     photo: "/members/romaine.jpg",
     filterText: "romaine klaire sison r documentation specialist researcher",
   },
@@ -58,7 +58,7 @@ const MEMBERS: MemberProfile[] = [
     initials: "J.J.",
     avatarLetter: "J",
     avatarClass: "avatar-jhonloyd",
-    role: "Quality Assurance · Section II-ACSAD",
+    role: "Quality Assurance · Team Blueteeth",
     focus: "Quality Assurance & Testing",
     bio: "Quality is my responsibility on our team. Before anything goes out, I go through it line by line, testing page features on different devices, catching typos and inconsistencies, and confirming that every requirement is met.",
     photo: "/members/jhonloyd.png",
@@ -70,9 +70,9 @@ const MEMBERS: MemberProfile[] = [
     initials: "J.M.B.",
     avatarLetter: "J",
     avatarClass: "avatar-john",
-    role: "UI/UX Designer · Section II-ACSAD",
+    role: "UI/UX Designer · Team Blueteeth",
     focus: "UI/UX Designer",
-    bio: "I serve as the UI/UX Designer for our group in Section II-ACSAD, creating clear, accessible, and engaging user experiences.",
+    bio: "I serve as the UI/UX Designer for Team Blueteeth, creating clear, accessible, and engaging user experiences.",
     photo: "/members/john-michael-bautista.png",
     filterText: "john michael bautista j ui ux designer",
   },
@@ -177,7 +177,7 @@ export default function HomePage() {
               </span>
               <div className="workspace-meta">
                 <span className="workspace-name">ORGCOM</span>
-                <span className="workspace-sub">UMak · Section II-ACSAD</span>
+                <span className="workspace-sub">UMak · Team Blueteeth</span>
               </div>
               <button
                 type="button"
@@ -453,7 +453,7 @@ export default function HomePage() {
                   <span className="nav-label">University of Makati</span>
                 </li>
                 <li className="info-row">
-                  <span className="nav-label">Section II-ACSAD · Due Nov 20</span>
+                  <span className="nav-label">Team Blueteeth · Due Nov 20</span>
                 </li>
               </ul>
             </details>
@@ -466,7 +466,7 @@ export default function HomePage() {
             <p className="breadcrumb">
               <span>ORGCOM</span>
               <span aria-hidden="true">/</span>
-              <span>Section II-ACSAD</span>
+              <span>Team Blueteeth</span>
             </p>
             <span className="topbar-status">University of Makati · Due Nov 20</span>
           </div>
@@ -489,10 +489,10 @@ export default function HomePage() {
                   ORGCOM
                 </h1>
                 <h2 className="org-heading-secondary">
-                  Organizational Communication · Section II-ACSAD
+                  Organizational Communication · Team Blueteeth
                 </h2>
                 <p className="masthead-subtitle">
-                  Organizational Communication, Section II-ACSAD, University of Makati.
+                  Organizational Communication, Team Blueteeth, University of Makati.
                 </p>
               </div>
 
@@ -608,8 +608,8 @@ export default function HomePage() {
                             <dd id="spotlight-focus">{activeProfile.focus}</dd>
                           </div>
                           <div>
-                            <dt>Section</dt>
-                            <dd>Section II-ACSAD · UMak</dd>
+                            <dt>Team</dt>
+                            <dd>Team Blueteeth · UMak</dd>
                           </div>
                         </dl>
                       </div>
@@ -973,7 +973,7 @@ export default function HomePage() {
 
           <footer className="site-footer">
             <p>
-              <strong>ORGCOM · Section II-ACSAD</strong> — University of Makati
+              <strong>ORGCOM · Team Blueteeth</strong> — University of Makati
             </p>
             <p className="footer-sub">
               Jemkirk Utana · Kirk Stanley Tan · Romaine Klaire Sison · Jhonloyd Jalea · John Michael Bautista

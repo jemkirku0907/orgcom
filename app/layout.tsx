@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ORGCOM | Organizational Communication · Section II-ACSAD",
-  description: "Organizational Communication showcase for Section II-ACSAD, University of Makati.",
+  title: "ORGCOM | Organizational Communication · Team Blueteeth",
+  description: "Organizational Communication showcase for Team Blueteeth, University of Makati.",
 };
 
 export default function RootLayout({
