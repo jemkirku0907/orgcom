@@ -141,7 +141,7 @@ export default function HomePage() {
   const activeReflectionMember = activeReflection
     ? MEMBERS.find((m) => m.id === activeReflection.memberId) || null
     : null;
-  const companyLogoSrc = isDarkMode ? "/logos/bjstu-logo-dark.png" : "/logos/bjstu-logo.jpg";
+  const companyLogoSrc = isDarkMode ? "/logos/bjstu-logo-dark.png" : "/logos/bjstu-logo-light.png";
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {

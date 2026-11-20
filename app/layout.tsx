@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "ORGCOM TEAM BLUETEETH",
   description: "Organizational Communication showcase for Team Blueteeth, University of Makati.",
   icons: {
-    icon: "/logos/bjstu-logo.jpg",
-    apple: "/logos/bjstu-logo.jpg",
+    icon: "/logos/bjstu-logo-light.png",
+    apple: "/logos/bjstu-logo-light.png",
   },
 };
 
