@@ -969,14 +969,14 @@ export default function HomePage() {
                 <h2 className="section-title">Company Details</h2>
               </div>
               <p className="section-lead">
-                Basic profile and background information about our featured companies.
+                Basic profile and background information about our company.
               </p>
 
               <div className="companies-grid">
                 <article className="company-profile-card">
                   <div className="company-card-top">
                     <span className="company-label">Our Company</span>
-                    <h3>Awake &amp; Aware Digital Wellness</h3>
+                    <h3>A &amp; A (Awake and Aware)</h3>
                   </div>
                   <dl className="company-facts">
                     <div>
@@ -1021,44 +1021,6 @@ export default function HomePage() {
                     <div>
                       <dt>Location &amp; Contact</dt>
                       <dd>Makati City · awakeandaware.blueteeth@gmail.com · #AwareAndAwake</dd>
-                    </div>
-                  </dl>
-                </article>
-
-                <article className="company-profile-card">
-                  <div className="company-card-top">
-                    <span className="company-label">Discussed Company</span>
-                    <h3>BJMSTTU (Brigade of Junior Media Students for Truth, Transparency, and Unity)</h3>
-                  </div>
-                  <dl className="company-facts">
-                    <div>
-                      <dt>Sector</dt>
-                      <dd>Student Led Media Advocacy, Digital Literacy &amp; Youth Digital Wellbeing</dd>
-                    </div>
-                    <div>
-                      <dt>Structure</dt>
-                      <dd>
-                        A student led, collaborative advocacy organization structured around research, media production,
-                        campus outreach, and school/barangay Digital Wellness Ambassadors working through open, flat
-                        team communication.
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Communication Practice</dt>
-                      <dd>
-                        Pairs research backed statistics on Filipino screen addiction (averaging 10 hours and 14 minutes
-                        of daily screen time) with clear, actionable community calls to action: the 20/20/20 Rule
-                        (#AwareAndAwake), Screen Free Bedtime Pledge, 7 Day Mindful Screen Challenge, and Hapag Kainan,
-                        Walang Gadget, to turn awareness into daily mindful habits.
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Reference</dt>
-                      <dd>
-                        MPAC Campaign (&ldquo;Awake and Aware: Students&apos; Mindful Screen Habits&rdquo;) &amp;
-                        MPAC.mp4 Advocacy Video; citing DataReportal (2023), WHO (2022), DepEd (2022), PLOS Global
-                        Public Health (2025), and Sen. Lacson&apos;s July 2025 social media regulation bill for minors.
-                      </dd>
                     </div>
                   </dl>
                 </article>
