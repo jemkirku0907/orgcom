@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     icon: "/logos/bjstu-logo-light.png",
     apple: "/logos/bjstu-logo-light.png",
   },
+  other: {
+    robots: "noai, noimageai",
+  },
 };
 
 export default function RootLayout({
